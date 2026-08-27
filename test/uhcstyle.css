@@ -1,3 +1,5 @@
+@import url("https://mspfa.com/css/?s=41577");
+
 body {
   background: #5a5a5a;
   margin: 0;
@@ -35,6 +37,10 @@ body {
   margin: 0 9px; 
 }
 
+.bannerImage {
+  content: url(./mspalogo_mspa.png);
+}
+
 .pageFrame {
   background: #c6c6c6;
   width: 950px;
@@ -57,8 +63,13 @@ body {
   flex-flow: column;
 }
 
+.pageContent .story-text {
+  width: 100%;
+}
+
 .footer {
   height: 110px;
+  width:950px;
   box-sizing: border-box;
   padding-left: 12px;
   padding-right: 12px;
@@ -68,15 +79,21 @@ body {
   margin: auto;
 }
 
-#command {
+#banner {
+  width: 100%;
+  text-align: center;
+}
+
+#command, #command1, #command2 {
   text-align: center;
   line-height: 1.1;
   font-size: 32px;
   padding: 15px 0;
+  margin: auto;
   max-width: 590px;
 }
 
-#content {
+#content, #content1, #content2 {
   padding: 0 25px;
   line-height: 1.15;
   margin: 0 0 30px 0;
@@ -84,8 +101,18 @@ body {
   text-align: center;
 }
 
-#content img {
+#content img, #content1 img, #content2 img {
   margin: 0 -25px;
+}
+
+#map {
+  position: relative;
+  margin-left: 32px;
+  padding-top: 20px;
+}
+
+#map>.Amapsec>a>.Amaphead, #map>.Amapsec>.Amaphead {
+  margin-left: 32px;
 }
 
 #links {
@@ -93,6 +120,7 @@ body {
   font-size: x-large;
   font-weight: 400;
   margin: 0 25px 30px;
+  max-width: 950px;
 }
 
 #links > span > div::before {
@@ -102,7 +130,14 @@ body {
 .bottomLinks {
   font-size: 10px;
   font-family: Verdana,Arial,Helvetica,sans-serif;
-  padding: 0 25px 10px;
+  padding: 0 25px 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#timestamp, #timestamp1, #timestamp2 {
+  font-weight: 300;
+  margin-right: 0;
 }
 
 .spoiler {
@@ -118,4 +153,13 @@ body {
 
 .spoiler.closed>div:last-child {
 	display: none;
+}
+
+.charaselect img {
+  width:72px;
+  left: calc(50% - 10px)
+}
+
+.dualWrapper {
+    display: none;
 }

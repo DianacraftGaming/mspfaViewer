@@ -1,0 +1,100 @@
+/* MAP */
+.map .pageContent{
+    width: 835px;
+    background: #eee;
+}
+
+.map .story-text {
+    background: #fff;
+}
+
+/* X2 COMBO */
+.dual .dualWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    padding-top: 15px;
+}
+
+.dual .dualWrapper .div {
+    display: flex;
+}
+
+.dual .dualWrapper>.pageContent {
+    max-width: 950px;
+    width: 650px;
+    display: flex;
+    flex: 0 1 auto;
+    align-items: center;
+    flex-flow: column;
+}
+
+.dual .pageFrame>.pageContent {
+    display: none;
+}
+
+.dual #main {
+  width: 100%;
+  box-sizing: border-box;
+}
+.dual #slide {
+  padding: 0;
+  background: transparent;
+  margin: 0;
+  max-width: 100%;
+  width: 100%;
+}
+.dual #foot {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 8%;
+}
+.dual .um { max-width: calc(100% - 212px); }
+
+.dual .pageFrame {
+    width:100%
+}
+
+.dual .footer {
+    width:100%
+}
+
+/* DOC SCRATCH'S INTERMISSION */
+
+.scratch {
+  background: #000000;
+  color: white;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.scratch .footer {
+    background: rgb(14, 70, 3);
+}
+
+.scratch .pageFrame {
+   background: #082a00
+}
+
+.scratch .pageContent {
+    background: rgb(14, 70, 3);
+}
+
+.scratch a {
+    color: #2cff4b;
+}
+
+.scratch .spoiler {
+    background-color: #000000;
+}
+
+.scratch .candyCorn { 
+  content: url(./assets/scratchcandycorn.png);
+  margin: 0 9px; 
+}
+
+.scratch .bannerImage {
+  content: url(./assets/scratchlogo.png);
+  margin: 0 30px;
+}

@@ -1,0 +1,102 @@
+{
+  "n": "Tests and Resources",
+  "o": "Link to adventure Icon",
+  "p": [
+    {
+      "d": 1787591145000,
+      "c": "Placeholder name whatever",
+      "b": "[img]./assets/1.png[/img]\n\n[spoiler open=Open Pesterlog close=Close Pesterlog]pesterlog type shit\n[color=#fd8603]coloured text example[/color][/spoiler]",
+      "n": [ 2 ]
+    },
+    {
+      "d": 1671518387574,
+      "c": "==>",
+      "b": "[img]./assets/2.png[/img]\n\nYou aren't limited to one image per page!\n\n[img]./assets/3.png[/img]",
+      "n": [ 3 ]
+    },
+    {
+      "d": 1671518387574,
+      "c": "==>",
+      "b": "In fact, an image doesn't have to be the first element or even present at all\n\n[img]./assets/4.png[/img]",
+      "n": [ 4 ]
+    },
+    {
+      "d": 1671518387574,
+      "c": "More stuff",
+      "b": "There's a lot more that you can do here easily, i put some stuff you can do in the <a href=\"?p=map\">adventure map</a>\n\nI also suggest checking out <a href=\"https://mspfa.com/?s=41577&p=1\">this mspfa</a> as it has a lot of useful resources\nThe css for it is imported here, so textboxes and effects generally shouldn't need any extra setup beyond assigning a class to a div. Themes need to be created manually, feel free to look at themes.css in the files for an example. Menus and Javasript ones will likely require more work, but I have examples of some of them in here",
+      "n": []
+    },
+    {
+      "d": 0,
+      "c": "Empty page",
+      "b": "Page content lol",
+      "n": [5]
+    },
+    {
+      "d": 0,
+      "c": "Scratch theme test",
+      "b": "Page content lol",
+      "n": [6],
+      "theme": "scratch",
+      "banner": "./assets/scratchbanner.gif"
+    },
+    {
+      "d": 0,
+      "c": "Text Effects",
+      "b": "<div class=\"docyell\">SHE HAS WHAT?</div>\n<gsun>Green Sun</gsun>\n<trick>Trickster Text</trick>\n<div class=\"lordeng\">[size=106]<r>W</r><b>H</b><r>E</r><b>N</b> <o>I</o> <g>A</g><b>M</b>[/size]\n[size=125]<r>A</r>L<b>R</b><r>E</r><b>A</b><o>D</o><g>Y</g>[/size]\n[size=148]<o>H</o>E<r>R</r><b>E</b><r>?</r>[/size]</div>\n<div class=\"textgrad\">This is rainbow wowie</div>",
+      "n" : [7]
+    },
+    {
+      "d": 0,
+      "c": "Page transitions",
+      "b": "[img]./assets/1.png[/img]",
+      "n" : [9]
+    },
+    {
+      "d": 0,
+      "c": "Page turn",
+      "b": " <div class=\"pageturn\"> [img]./assets/1.png[/img] </div> [img]./assets/2.png[/img] ",
+      "n" : [10]
+    },
+    {
+      "d": 0,
+      "c": "Page turn w/ Back",
+      "b": " <div class=\"pageturn\"> [img]./assets/2.png[/img] [img]./assets/3.png[/img] </div> [img]./assets/4.png[/img]",
+      "n" : [11]
+    },
+    {
+      "d": 0,
+      "c": "Cue card fall",
+      "b": " <div class=\"cuecard\"> [img]./assets/4.png[/img] </div> [img]./assets/2.png[/img] ",
+      "n" : [12]
+    },
+    {
+      "d": 0,
+      "c": "Extra transitions",
+      "b": "<a href=\"https://mspfa.com/?s=63732&p=1\">https://mspfa.com/?s=63732&p=1</a>\nMay require some restructuring, idk if it's worth it",
+      "n" : []
+    },
+    {
+      "d": 0,
+      "c": "Character Selection",
+      "b": "<div class=\"charaselect\"><div><br><br><a href=\"?p=1\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/1.png)\"></div><br><br><a href=\"?p=2\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/2.png)\"></div><br><br><a href=\"?p=3\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/3.png)\"></div><br><br><a href=\"?p=4\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/4.png)\"></div><br><br></div></div>\n\nThe amount of characters can be anything between 1 and 8, doesn't have to be 4 specifically",
+      "n" : []
+    },
+    {
+      "d": 0,
+      "c": "this title is only seen in the log",
+      "b": "the page body doesn't appear, but you should still fill out the links below for keyboard navigation to work",
+      "n" : [],
+      "dual": [
+        {
+          "c": "where doing it man",
+          "b": "[img]./assets/1.png[/img]\n\nHad to do these basically competely on my own lmao\n\nBut at least there was already reasonable structure in place so it wasn't too bad<br><br><div class=\"cmdmimic\">> <a href=\"?p=map\"> Adventure Map</a></div><br>"
+        },
+        {
+          "c": "where MAKING THIS HAPPEN",
+          "b": "[img]./assets/2.png[/img]\n\nNote!! the json for this page is pretty different, check adventure.json for more details\nAlso the dual screens should be compatible with other themes, unless they change the layout drastically<br><br><div class=\"cmdmimic\">> <a href=\"?p=map\"> 1st page lol</a></div><br>"
+        }
+      ]
+    }
+  ]
+}

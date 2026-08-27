@@ -158,7 +158,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 });
 
 const clickLink = (event, link) => {
-  console.log(link)
+  //console.log(link)
   event.preventDefault()
   history.pushState(null, '', link)
   loadPage()
@@ -171,7 +171,7 @@ const getUrlPage = () => {
 }
 
 const loadIntoElement = (id, element) => {
-  console.log(id, element)
+  //console.log(id, element)
   document.getElementById(id).innerHTML = ""
   document.getElementById(id).append(element)
 }
@@ -182,6 +182,8 @@ const loadAdventure  = data => {
   document.title = adventureData.n
   document.getElementById("favicon").href = adventureData.o
   document.getElementById("goback").addEventListener("click", evt => clickLink(evt, document.getElementById("goback").href))
+  document.getElementById("goback1").addEventListener("click", evt => clickLink(evt, document.getElementById("goback1").href))
+  document.getElementById("goback2").addEventListener("click", evt => clickLink(evt, document.getElementById("goback2").href))
   loadPage()
 }
 
@@ -219,11 +221,21 @@ const loadPage = () => {
   
   document.getElementById("gobackbar").style.display = "none"
   document.getElementById("goback").style.display = "none"
+  document.getElementById("gobackbar1").style.display = "none"
+  document.getElementById("goback1").style.display = "none"
+  document.getElementById("gobackbar2").style.display = "none"
+  document.getElementById("goback2").style.display = "none"
   document.getElementById("prelaod").innerHTML = ""
   
   // If Log, load log p
   if (p == "log") {
     loadLog()
+    return
+  }
+
+   // If Map, load map p
+  if (p == "map") {
+    loadMap()
     return
   }
 
@@ -255,7 +267,31 @@ const loadPage = () => {
   loadIntoElement("command", MSPFA.parseBBCode(pageData.c))
   loadIntoElement("content", MSPFA.parseBBCode(pageData.b))
   loadIntoElement("links", genPageLinks(adventureData.p, pageData.n))
+  document.getElementById("map").style = "display: none;"
   if ("theme" in pageData) document.body.className = pageData.theme + " mspfa p" + p
+  document.getElementById("banner").innerHTML = ""
+  if ("banner" in pageData) { 
+    const image = document.createElement("img")
+    image.src = pageData.banner
+
+    document.getElementById("banner").append(image)
+  }
+  const date = new Date(pageData.d)
+  document.getElementById("timestamp").innerHTML = date.toLocaleDateString("en-US") + ", " + date.toLocaleTimeString("en-US")
+  document.getElementById("timestamp1").innerHTML = date.toLocaleDateString("en-US") + ", " + date.toLocaleTimeString("en-US")
+  document.getElementById("timestamp2").innerHTML = date.toLocaleDateString("en-US") + ", " + date.toLocaleTimeString("en-US")
+
+  // Load duals
+  if ("dual" in pageData) {
+    let theme = " mspfa p" + p 
+    if ("theme" in pageData) theme = pageData.theme + " mspfa p" + p
+    document.body.className = "dual " + theme
+    loadIntoElement("command1", MSPFA.parseBBCode(pageData.dual[0].c))
+    loadIntoElement("content1", MSPFA.parseBBCode(pageData.dual[0].b))
+
+    loadIntoElement("command2", MSPFA.parseBBCode(pageData.dual[1].c))
+    loadIntoElement("content2", MSPFA.parseBBCode(pageData.dual[1].b))
+  }
 
   // Gen go back number
   var backid = 0;
@@ -266,6 +302,15 @@ const loadPage = () => {
     if (document.getElementById("gobackbar")) document.getElementById("gobackbar").style.display = "inline"
     document.getElementById("goback").style.display = "inline"
     document.getElementById("goback").href = "?p=" + backid
+
+    if (document.getElementById("gobackbar1")) document.getElementById("gobackbar1").style.display = "inline"
+    document.getElementById("goback1").style.display = "inline"
+    document.getElementById("goback1").href = "?p=" + backid
+
+    if (document.getElementById("gobackbar2")) document.getElementById("gobackbar2").style.display = "inline"
+    document.getElementById("goback2").style.display = "inline"
+    document.getElementById("goback2").href = "?p=" + backid
+    
     preloadImages(backid)
   }
 
@@ -297,6 +342,18 @@ const loadLog = () => {
 
   loadIntoElement("command", MSPFA.parseBBCode(adventureData.n + " LOG"))
   loadIntoElement("content", ul)
+  loadIntoElement("links", MSPFA.parseBBCode(""))
+}
+
+const loadMap = () => {
+  // Add the Map
+  document.body.className = "map mspfa"
+  fetch('./adventuremap.html')
+    .then(res => res.text())
+    .then(res => document.getElementById("map").innerHTML = res)
+  document.getElementById("map").style = "display: block;"
+  loadIntoElement("command", MSPFA.parseBBCode(adventureData.n + " MAP"))
+  document.getElementById("content").innerHTML = "<a href=\"https://mspfa.com/?s=41577&p=99\">Map Tutorial</a>"
   loadIntoElement("links", MSPFA.parseBBCode(""))
 }
 
