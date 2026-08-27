@@ -25,10 +25,26 @@ Page objects have these values:
   "d": 1671518387574,
   "c": "Page 1 title",
   "b": "Page 1 content",
-  "n": [ 2 ]
+  "n": [ 2 ],
+  "theme": "scratch",
+  "banner": "./assets/scratchbanner.gif",
+  "dual": [
+    {
+      "c": "Left side title",
+      "b": "Left side content",
+    },
+    {
+      "c": "Right side title",
+      "b": "Right side content",
+    }
+  ]
 }
 ```
 - _**d**ate_ is the date the page was published in as a unix timestamp
 - _**c**ommand_ is the page's command or title, using html and/or mspfa bbcode
 - _**b**ody_ is the content of the page, using html and/or mspfa bbcode
 - _**n**ext_ is an array of page indexes pointing to the next page (Page indexes start at 1)
+- **theme** is optional, can be used to override css of a page
+- **banner** is optional, adds a banner on top of a page
+- **dual** is optional, completely hides the normal page content and replaces it with 2 new pages if present. The inner "c" and "b" are the command and body respectively for each of the pages
+
