@@ -33,12 +33,12 @@ body {
 .navList a:nth-child(n+13) { color: #ffb529; }
 
 .candyCorn { 
-  content: url(./candycorn.gif);
+  content: url(./extras/candycorn.gif);
   margin: 0 9px; 
 }
 
 .bannerImage {
-  content: url(./mspalogo_mspa.png);
+  content: url(./extras/mspalogo_mspa.png);
 }
 
 .pageFrame {
@@ -105,13 +105,13 @@ body {
   margin: 0 -25px;
 }
 
-#map {
+#adventuremap {
   position: relative;
   margin-left: 32px;
   padding-top: 20px;
 }
 
-#map>.Amapsec>a>.Amaphead, #map>.Amapsec>.Amaphead {
+#adventuremap>.Amapsec>a>.Amaphead, #adventuremap>.Amapsec>.Amaphead {
   margin-left: 32px;
 }
 

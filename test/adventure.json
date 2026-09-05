@@ -5,19 +5,19 @@
     {
       "d": 1787591145000,
       "c": "Placeholder name whatever",
-      "b": "[img]./assets/1.png[/img]\n\n[spoiler open=Open Pesterlog close=Close Pesterlog]pesterlog type shit\n[color=#fd8603]coloured text example[/color][/spoiler]",
+      "b": "[img]./storyfiles/1.png[/img]\n\n[spoiler open=Open Pesterlog close=Close Pesterlog]pesterlog type shit\n[color=#fd8603]coloured text example[/color][/spoiler]",
       "n": [ 2 ]
     },
     {
       "d": 1671518387574,
       "c": "==>",
-      "b": "[img]./assets/2.png[/img]\n\nYou aren't limited to one image per page!\n\n[img]./assets/3.png[/img]",
+      "b": "[img]./storyfiles/2.png[/img]\n\nYou aren't limited to one image per page!\n\n[img]./storyfiles/3.png[/img]",
       "n": [ 3 ]
     },
     {
       "d": 1671518387574,
       "c": "==>",
-      "b": "In fact, an image doesn't have to be the first element or even present at all\n\n[img]./assets/4.png[/img]",
+      "b": "In fact, an image doesn't have to be the first element or even present at all\n\n[img]./storyfiles/4.png[/img]",
       "n": [ 4 ]
     },
     {
@@ -38,7 +38,7 @@
       "b": "Page content lol",
       "n": [6],
       "theme": "scratch",
-      "banner": "./assets/scratchbanner.gif"
+      "banner": "./extras/scratchbanner.gif"
     },
     {
       "d": 0,
@@ -49,25 +49,25 @@
     {
       "d": 0,
       "c": "Page transitions",
-      "b": "[img]./assets/1.png[/img]",
+      "b": "[img]./storyfiles/1.png[/img]",
       "n" : [9]
     },
     {
       "d": 0,
       "c": "Page turn",
-      "b": " <div class=\"pageturn\"> [img]./assets/1.png[/img] </div> [img]./assets/2.png[/img] ",
+      "b": " <div class=\"pageturn\"> [img]./storyfiles/1.png[/img] </div> [img]./storyfiles/2.png[/img] ",
       "n" : [10]
     },
     {
       "d": 0,
       "c": "Page turn w/ Back",
-      "b": " <div class=\"pageturn\"> [img]./assets/2.png[/img] [img]./assets/3.png[/img] </div> [img]./assets/4.png[/img]",
+      "b": " <div class=\"pageturn\"> [img]./storyfiles/2.png[/img] [img]./storyfiles/3.png[/img] </div> [img]./storyfiles/4.png[/img]",
       "n" : [11]
     },
     {
       "d": 0,
       "c": "Cue card fall",
-      "b": " <div class=\"cuecard\"> [img]./assets/4.png[/img] </div> [img]./assets/2.png[/img] ",
+      "b": " <div class=\"cuecard\"> [img]./storyfiles/4.png[/img] </div> [img]./storyfiles/2.png[/img] ",
       "n" : [12]
     },
     {
@@ -79,7 +79,7 @@
     {
       "d": 0,
       "c": "Character Selection",
-      "b": "<div class=\"charaselect\"><div><br><br><a href=\"?p=1\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/1.png)\"></div><br><br><a href=\"?p=2\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/2.png)\"></div><br><br><a href=\"?p=3\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/3.png)\"></div><br><br><a href=\"?p=4\"><div><br><img src=\"./assets/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./assets/4.png)\"></div><br><br></div></div>\n\nThe amount of characters can be anything between 1 and 8, doesn't have to be 4 specifically",
+      "b": "<div class=\"charaselect\"><div><br><br><a href=\"?p=1\"><div><br><img src=\"./map/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./storyfiles/1.png)\"></div><br><br><a href=\"?p=2\"><div><br><img src=\"./map/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./storyfiles/2.png)\"></div><br><br><a href=\"?p=3\"><div><br><img src=\"./map/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./storyfiles/3.png)\"></div><br><br><a href=\"?p=4\"><div><br><img src=\"./map/placeholder.png\" class=\"\"><br></div></a><div class=\"charabg\" style=\"background-image: url(./storyfiles/4.png)\"></div><br><br></div></div>\n\nThe amount of characters can be anything between 1 and 8, doesn't have to be 4 specifically",
       "n" : []
     },
     {
@@ -90,13 +90,20 @@
       "dual": [
         {
           "c": "where doing it man",
-          "b": "[img]./assets/1.png[/img]\n\nHad to do these basically competely on my own lmao\n\nBut at least there was already reasonable structure in place so it wasn't too bad<br><br><div class=\"cmdmimic\">> <a href=\"?p=map\"> Adventure Map</a></div><br>"
+          "b": "[img]./storyfiles/1.png[/img]\n\nHad to do these basically competely on my own lmao\n\nBut at least there was already reasonable structure in place so it wasn't too bad<br><br><div class=\"cmdmimic\">> <a href=\"?p=map\"> Adventure Map</a></div><br>"
         },
         {
           "c": "where MAKING THIS HAPPEN",
-          "b": "[img]./assets/2.png[/img]\n\nNote!! the json for this page is pretty different, check adventure.json for more details\nAlso the dual screens should be compatible with other themes, unless they change the layout drastically<br><br><div class=\"cmdmimic\">> <a href=\"?p=map\"> 1st page lol</a></div><br>"
+          "b": "[img]./storyfiles/2.png[/img]\n\nNote!! the json for this page is pretty different, check adventure.json for more details\nAlso the dual screens should be compatible with other themes, unless they change the layout drastically<br><br><div class=\"cmdmimic\">> <a href=\"?p=1\"> 1st page lol</a></div><br>"
         }
       ]
+    },
+    {
+      "d": 0,
+      "c": "HOMOSUCK.",
+      "b": "Page content lol",
+      "n" : [15],
+      "theme": "homosuck"
     }
   ]
 }

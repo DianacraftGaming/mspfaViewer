@@ -267,7 +267,7 @@ const loadPage = () => {
   loadIntoElement("command", MSPFA.parseBBCode(pageData.c))
   loadIntoElement("content", MSPFA.parseBBCode(pageData.b))
   loadIntoElement("links", genPageLinks(adventureData.p, pageData.n))
-  document.getElementById("map").style = "display: none;"
+  document.getElementById("adventuremap").style = "display: none;"
   if ("theme" in pageData) document.body.className = pageData.theme + " mspfa p" + p
   document.getElementById("banner").innerHTML = ""
   if ("banner" in pageData) { 
@@ -347,11 +347,11 @@ const loadLog = () => {
 
 const loadMap = () => {
   // Add the Map
-  document.body.className = "map mspfa"
+  document.body.className = "adventuremap mspfa"
   fetch('./adventuremap.html')
     .then(res => res.text())
-    .then(res => document.getElementById("map").innerHTML = res)
-  document.getElementById("map").style = "display: block;"
+    .then(res => document.getElementById("adventuremap").innerHTML = res)
+  document.getElementById("adventuremap").style = "display: block;"
   loadIntoElement("command", MSPFA.parseBBCode(adventureData.n + " MAP"))
   document.getElementById("content").innerHTML = "<a href=\"https://mspfa.com/?s=41577&p=99\">Map Tutorial</a>"
   loadIntoElement("links", MSPFA.parseBBCode(""))

@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./uhcstyle.css">
   <link rel="stylesheet" href="./themes.css">
   <script src="../mspfaViewer.js"></script>
+  <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
   <style id="adventureStyle"></style>
 </head>
 <body>
@@ -17,25 +18,25 @@
       <nav class="navBanner customNavBanner pixelated">
         <div id="banner"></div>
         <div class="navList">
-          <a href="/">HOME</a> 
+          <a href="/" id="home">HOME</a> 
           <div class="candyCorn"></div>
-          <!-- <a href="/help">HELP</a> 
+          <!-- <a href="/help" id ="help">HELP</a> 
           <div class="candyCorn"></div>-->
-          <a href="?p=map">MAP</a> 
+          <a href="?p=map" id="map">MAP</a> 
           <div class="sep">|</div> 
-          <a href="?p=log">LOG</a> 
+          <a href="?p=log" id ="log">LOG</a> 
           <!-- <div class="sep">|</div>
-          <a href="/search">SEARCH</a> 
+          <a href="/search" id="search">SEARCH</a> 
           <div class="candyCorn"></div>
-          <a href="/news">NEWS</a> 
+          <a href="/news" id="news">NEWS</a> 
           <div class="sep">|</div>
-          <a href="/music">MUSIC</a> 
+          <a href="/music" id="music">MUSIC</a> 
           <div class="candyCorn"></div>
-          <a href="/evenmore">MORE</a> 
+          <a href="/evenmore" id="evenmore">MORE</a> 
           <div class="sep">|</div>
-          <a href="/settings">SETTINGS</a> 
+          <a href="/settings" id="settings">SETTINGS</a> 
           <div class="sep">|</div>
-          <a href="/credits">CREDITS</a>  -->
+          <a href="/credits" id="credits">CREDITS</a>  -->
         </div>
       </nav>
       <div class="pageFrame">
@@ -82,7 +83,7 @@
         <div class="pageContent">
           <div id="command"></div>
           <div class="story-text">
-            <div id="map"></div>
+            <div id="adventuremap"></div>
             <div id="content"></div>
             <div id="links"></div>
 

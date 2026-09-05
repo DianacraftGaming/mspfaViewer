@@ -1,10 +1,10 @@
 /* MAP */
-.map .pageContent{
+.adventuremap .pageContent{
     width: 835px;
     background: #eee;
 }
 
-.map .story-text {
+.adventuremap .story-text {
     background: #fff;
 }
 
@@ -90,11 +90,100 @@
 }
 
 .scratch .candyCorn { 
-  content: url(./assets/scratchcandycorn.png);
+  content: url(./extras/scratchcandycorn.png);
   margin: 0 9px; 
 }
 
 .scratch .bannerImage {
-  content: url(./assets/scratchlogo.png);
+  content: url(./extras/scratchlogo.png);
   margin: 0 30px;
+}
+
+/* HOMOSUCK */
+
+.homosuck {
+  background: #042300;
+  color: #2ed73a;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.homosuck .footer {
+    background: #042300;
+}
+
+.homosuck .pageFrame {
+   background: #168500
+}
+
+.homosuck .pageContent {
+    background: #073c00;
+}
+
+.homosuck a {
+    color: #2ed73a;
+}
+
+.homosuck .candyCorn { 
+  content: url(./extras/a6a6_tooth.gif);
+  margin: 0 9px; 
+}
+
+.homosuck .bannerImage.left {
+  content: url(./extras/a6a6_bannerframe.png);
+  margin: 0;
+}
+
+.homosuck .bannerImage.right {
+  display: none;
+}
+
+.homosuck .navList a {
+    font-size: 0;
+    color: #2ed73a !important;
+}
+
+.homosuck .navList a::after {
+    font-size: 10px;
+    text-decoration: underline;
+}
+
+.homosuck #home::after {
+    content: "WORTHLESS GARBAGE.";
+}
+
+.homosuck #help::after {
+    content: "STUPID.";
+}
+
+.homosuck #map::after {
+    content: "WOW.";
+}
+
+.homosuck #log::after {
+    content: "NO.";
+}
+
+.homosuck #search::after {
+    content: "BORING.";
+}
+
+.homosuck #news::after {
+    content: "BULLSHIT.";
+}
+
+.homosuck #music::after {
+    content: "DUMB NOISE.";
+}
+
+.homosuck #evenmore::after {
+    content: "WHO CARES?";
+}
+
+.homosuck #settings::after {
+    content: "WHATEVER.";
+}
+
+.homosuck #credits::after {
+    content: "MORONS.";
 }
