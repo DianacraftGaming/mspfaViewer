@@ -6,6 +6,10 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
+swf {
+  margin-left: -25px;
+}
+
 .navList {
   width: 950px;
   height: 17px;

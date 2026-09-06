@@ -104,6 +104,12 @@
       "b": "Page content lol",
       "n" : [15],
       "theme": "homosuck"
+    },
+    {
+      "d": 0,
+      "c": "[S] John: Play haunting piano refrain.",
+      "b": "<swf url=\"./storyfiles/00077.swf\" width=\"650\" height=\"450\" autoplay=\"off\" id=\"swf\" ml=\"0\"></swf>\nCurrently the autoplay parameter is set to \"off\", you can change it to \"on\" but note that if your browser doesn't allow websites to autoplay audio you will still need to click on the flash for the audio to play. The \"ml\" parameter stands for margin-left, if your flash is a different size from the page, you might want to tinker with that\n\nIf the flash doesn't appear at all, refresh the page, it happens to me sometimes",
+      "n": [ ]
     }
   ]
 }

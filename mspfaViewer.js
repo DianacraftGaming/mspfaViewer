@@ -267,6 +267,7 @@ const loadPage = () => {
   loadIntoElement("command", MSPFA.parseBBCode(pageData.c))
   loadIntoElement("content", MSPFA.parseBBCode(pageData.b))
   loadIntoElement("links", genPageLinks(adventureData.p, pageData.n))
+  initFlashes(document)
   document.getElementById("adventuremap").style = "display: none;"
   if ("theme" in pageData) document.body.className = pageData.theme + " mspfa p" + p
   document.getElementById("banner").innerHTML = ""
@@ -386,3 +387,44 @@ window.addEventListener("keydown", function(evt) {
     })
   }
 })
+
+function initFlashes(element){
+  //console.log("Initialising .swf files")
+  const flashes = element.getElementsByTagName("swf")
+  for (const flash of flashes) {
+    console.log(flash.attributes)
+    const url = flash.getAttribute("url");
+    const width = flash.getAttribute("width");
+    const height = flash.getAttribute("height");
+    const autoplay = flash.getAttribute("autoplay");
+    const id = flash.getAttribute("id");
+    const ml = flash.getAttribute("ml");
+
+    embedSWF(url, width, height, autoplay, id, ml)
+  }
+}
+
+function embedSWF(url, width, height, autoplay, id, ml){
+  window.RufflePlayer = window.RufflePlayer || {};
+  window.addEventListener("load", (event) => {
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      player.style.width = width+"px"
+      player.style.height = height+"px"
+      if (ml != null) { player.style.marginLeft = ml+"px" }
+      if (id == null) {
+        const content = document.getElementById("content");
+        content.prepend(player);
+      } else {
+        const container = document.getElementById(id);
+        container.append(player);
+      }
+      player.ruffle().config = {
+        autoplay: autoplay || "auto",
+        unmuteOverlay: "hidden",
+        contextMenu: "off",
+        splashScreen: false
+      }
+      player.ruffle().load(url);
+  });
+}
